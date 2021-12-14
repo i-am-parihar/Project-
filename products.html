@@ -1,20 +1,196 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    
+<style>
+    #container{
+        border: 1px solid green;
+        width: 100%;
+        height: 3500px;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: 50px 300px 1000px 1000px 600px 400px ;
+        grid-template-areas: 
+        "t t t t t t t t t t t t"
+        "h h h h h h h h h h h h"
+        "f f f p p p p p p p p p"
+        ". . . p p p p p p p p p"
+        "r r r r r r r r r r r r"
+        "b b b b b b b b b b b b";
+        gap: 10px;
+    }
+    #container>div:first-child{
+        grid-area: t;
+    }
+    #container>div:nth-child(2){
+        grid-area: h;
+        border: 1px solid red;
+    }
+    #container>div:nth-child(3){
+        grid-area: f;
+        border: 1px solid red;
+    }
+    #container>div:nth-child(4){
+        grid-area: p;
+        border: 1px solid red;
+    }
+    #container>div:nth-child(5){
+        grid-area: r;
+        border: 1px solid red;
+    }
+    #container>div:nth-child(6){
+        grid-area: b;
+        border: 1px solid red;
+    }
+    #top{
+        background-color:#1e516c ;
+        width: 100%;
+        color: white;
+        text-align: center;
+        left: 0;
+        right: 0;
+        position: fixed;
+        top: 0;
+    }
+    #topText{
+        font-family: system-ui;
+        margin-bottom: 10;
+    }
+    #headOne{
+        display: flex;
+        border: 1px solid blue;
+        width: 100;
+        height: 30%;
+        justify-content:space-between;
+        align-items: center;
+    }
+   #input_container{
+       position: relative;
+       padding: 0;
+       margin: 0;
+   }
+   #input { height:20px; margin:0; padding-left: 100px; }
 
+   #input_img { position:absolute; bottom: 3px; left:246px; width:20px; height:20px;}
+   #ubor_img{
+       padding-left: 100;
+   }
+   .img_icon:hover{
+       background-color: rgb(224, 224, 97);
+       cursor: pointer;
+   }
+
+ .img_icon{
+     background-color: teal;
+     border-radius: 20px;
+ }
+ .dropdown{
+     position: relative;
+ }
+ .dropdown_content{
+     display: none;
+     position: absolute;
+     text-align: center;
+ }
+.dropdown:hover .dropdown_content{
+    display: block;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    width: 300px;
+    height: 500px;
+    line-height: 1;
+}
+#loginButton{
+    background-color: #f2cc6e;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 90%;
+    height: 10%
+}
+#loginButton:hover{
+    background-color: white;
+    color: black;
+}
+.dropdown_content{
+    font-family: system-ui;
+}
+.dropdown_content>p:nth-child(6){
+    color: rgb(150, 138, 124);
+}
+.dropdown_content>p:nth-child(10){
+    color: rgb(150, 138, 124);
+}
+.loginBox{
+    width: 90%;
+    height: 8%;
+    border: 1px solid rgb(199, 189, 178) ;
+}
+
+</style>
+<!-- <link rel="stylesheet" href="products.css"/> -->
 </head>
 <body>
     <div id="container">
+        <!-- top most part -->
 
-<div id="top"></div>
-<div id="heading"></div>
-<div id="filter"></div>
-<div id="product"></div>
-<div id="review"></div>
-<div id="basic"></div>
+        <div id="top">
+            <p id="topText">FOR ONLINE PAYMENT EXTRA ₹50 DISCOUNT ON ORDERS ABOVE ₹500</p>
+        </div>
+
+        <!-- heading  -->
+<div id="heading">
+        <!-- headind(part-1) start -->
+<div id="headOne">
+<div id="input_container">
+    <input type="text" id="input" value="search here..." >
+    <img src="https://cdn-icons-png.flaticon.com/512/751/751463.png" id="input_img">
+</div>
+
+<div id="ubor_img">
+    <img src="https://www.uboric.com/wp-content/uploads/2021/04/uboric.svg" width="490" height="90">
+</div>
+
+<div id="icon">
+      <span class="dropdown"><img src="https://cdn-icons.flaticon.com/png/128/3293/premium/3293334.png?token=exp=1639499262~hmac=9c3d0488b491fad385c0e0ee6609f510" width="45" height="45" class="img_icon">
+        <div class="dropdown_content">
+         <h2 style="color: #1e516c;">Sign in</h2><br>
+         <p>CREATE AN ACCOUNT</p><br>
+         <hr>
+         <p>Username or email<span style="color: rgb(255, 30, 0);">*</span></p><br>
+         <input type="text" class="loginBox"><br>
+         <p>Password<span style="color: rgb(255, 30, 0);">*</span></p><br>
+         <input type="text"  class="loginBox"><br>
+         <p>LOST YOUR PASSWORD?</p><br>
+         <button id="loginButton">LOGIN</button>
+        </div>
+        </span>
+        <img src="https://cdn-icons.flaticon.com/png/512/4153/premium/4153710.png?token=exp=1639510907~hmac=0af7a3b69413c98923aa67f89d3368fc" width="45" height="45" class="img_icon">
+</div>
+
+
+<div id="count"> 
+</div>
+</div>
+    <!-- heading(part-2) start -->
+<div id="headTwo">
+
 
 
 
 </div>
+
+
+</div>
+
+<div id="filter">
+</div>
+<div id="product"></div>
+<div id="review"></div>
+<div id="bottom"></div>
+
+
+    </div>
 </body>
 </html>
+<script src="products.js">
+
+</script>

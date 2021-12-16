@@ -2,73 +2,101 @@
 <html lang="en">
 <head>
 <link rel="stylesheet" href="css/products.css"/>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
 </head>
 <body>
-    
-    <div id="container">
-        <!-- top most part -->
-
-        <div id="top">
-            <p id="topText">FOR ONLINE PAYMENT EXTRA ₹50 DISCOUNT ON ORDERS ABOVE ₹500</p>
-        </div>
-
-        <!-- heading  -->
-<div id="heading">
-        <!-- headind(part-1) start -->
-<div id="headOne">
-<div id="input_container">
-    <input type="text" id="input" value="search here..." >
-    <img src="https://cdn-icons-png.flaticon.com/512/751/751463.png" id="input_img">
-</div>
-
-<div id="ubor_img">
-    <img src="https://www.uboric.com/wp-content/uploads/2021/04/uboric.svg" width="490" height="90">
-</div>
-
-<div id="icon">
-      <span class="dropdown"><img src="https://cdn-icons.flaticon.com/png/128/3293/premium/3293334.png?token=exp=1639499262~hmac=9c3d0488b491fad385c0e0ee6609f510" width="45" height="45" class="img_icon">
-        <div class="dropdown_content">
-         <h2 style="color: #1e516c;">Sign in</h2><br>
-         <p>CREATE AN ACCOUNT</p><br>
-         <hr>
-         <p>Username or email<span style="color: rgb(255, 30, 0);">*</span></p><br>
-         <input type="text" class="loginBox"><br>
-         <p>Password<span style="color: rgb(255, 30, 0);">*</span></p><br>
-         <input type="text"  class="loginBox"><br>
-         <p>LOST YOUR PASSWORD?</p><br>
-         <button id="loginButton">LOGIN</button>
-        </div>
-        </span>
-        <img src="https://cdn-icons.flaticon.com/png/512/4153/premium/4153710.png?token=exp=1639510907~hmac=0af7a3b69413c98923aa67f89d3368fc" width="45" height="45" class="img_icon">
-</div>
-
-
-<div id="count"> 
-</div>
-</div>
-    <!-- heading(part-2) start -->
-<div id="headTwo">
-
-
-
-
-</div>
-
-
-</div>
+ <div id="mainBox">   
+<div id="container">
 
 <div id="filter">
-</div>
-<div id="product">
-    
-</div>
-<div id="review"></div>
-<div id="bottom"></div>
+    <div class="line"></div>
 
-
+    <div id="sliderBox">
+    <p>
+        <label for="amount">Price range:</label>
+        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+    </p>  
+    <div id="slider"></div>
     </div>
+
+     <div class="line"></div>
+
+    <div id="profilterBox">
+   <select id="proCategorie" onchange="proFilter()">
+    <option><span id="proLine">Product categories</span></option>
+   <option value="footwear">Men's footwear</option>
+   <option value="party">Casual/Party Shoes</option>
+   <option value="loafers">Loafers</option>
+   <option value="mojdi">Mojdi</option>
+   </select>
+   </div>
+
+   <div class="line"></div>
+
+   <div id="sizefilterBox">
+       <select id="sizebox" onchange="sizeFilter()">
+       <option>By Size</option>
+       <option value="6">6</option>
+       <option value="7">7</option>
+       <option value="8">8</option>
+       <option value="9">9</option>
+       <option value="10">10</option>
+       </select>
+   </div>
+
+   <div class="line"></div>
+
+   <div id="colorfilterBox">
+    <select id="colorbox" onchange="colorFilter()">
+    <option>By Color</option>
+    <option value="blue">BLUE</option>
+    <option value="brown">BROWN</option>
+    <option value="black">BLACK</option>
+    <option value="chery">CHERY</option>
+    </select>
+   </div>
+
+   <div class="line"></div>
+   <div id="clouserfilterBox">
+    <select id="clouserbox" onchange="clouserFilter()">
+    <option>By Clouser</option>
+    <option value="laceup">LACE UP</option>
+    <option value="slipon">SLIP ON</option>
+    </select>
+   </div>
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+</div> 
+<div id="product">
+<ul id="productlist"> </ul>
+</div>
+</div>
+
+<div>
+<button id="loadButton">LOAD MORE</button>
+</div>
+<div>
+    <p id="showLine">Showing 1–32 of 63 results</p>
+</div>
+
+
+
+</div>
 </body>
 </html>
-<script src="products.js">
-
-</script>
+<script src="products.js"></script>

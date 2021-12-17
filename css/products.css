@@ -1,0 +1,166 @@
+#mainBox{
+    border: 1px solid green;
+    width: 100%;
+    height: 4500px;
+}
+#container{
+display: flex;
+}
+#filter{
+    width: 360px;
+    height: 1190px;
+    border: 1px solid red;
+}
+#product{
+    width: 1430px;
+    height: 1190px;
+    border: 1px solid blue;
+}
+#productlist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#box{
+    border: 1px solid darkmagenta;
+    width:  280px;
+    height: 350px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+#box>p{
+font-size: large;
+font-family: system-ui;
+}
+#box:hover{
+cursor: pointer;
+}
+.featured{
+    width: 100%;
+    height: 45%;
+   cursor: pointer;
+   /* margin-bottom: 10px; */
+}
+.thumbnail{
+    width: 55px;
+    height: 90%;
+    margin-right: 5px;
+    border: 1px solid rgb(155, 138, 118);
+}
+.thumbnail:hover{
+    opacity: 1;
+}
+.active{
+    opacity: 1;
+}
+#cont{
+    font-size: large;
+    font-family: system-ui;
+    /* font-weight: 1000px; */
+}
+
+#box:hover #name{
+    text-decoration:underline ;
+}
+#box:hover #price{
+    margin-top: -450px;
+    margin-bottom: 420px;
+    color: rgb(128, 9, 0);
+}
+#cont:hover{
+    color: blue;
+}
+#dropup{
+    /* border: 1px solid red; */
+  padding-left: 1000px;
+    height: 40px; 
+    /* display: none; */
+}
+#box:hover #dropup{
+    padding-left: 10px;
+    height: 50px;
+}
+#disImage{
+    /* border: 1px solid red; */
+    width: 15%;
+    height: 7.5%;
+    margin-right: 90%;
+}
+
+#loadButton{
+    padding: 15px 50px ;
+    background-color: white;
+    font-family: system-ui;
+    border-radius: 5px;
+    margin-left: 55%;
+}
+#loadButton:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#name{
+    font-weight: 400;
+}
+#showLine{
+    font-weight: 400;
+    font-size: 400;
+    font-weight: 450;
+    font-family: system-ui;
+     margin-left: 55%;
+}
+#sliderBox{
+    border: 1px solid red;
+    height: 80px;  
+}
+#slider{
+    color: transparent;
+    height: 10px;
+    width: 250px;
+    margin-left: 10px;
+    border: 1px solid black;
+}
+#slider::-webkit-slider-thumb{
+    opacity: 1;
+    border: 1px solid black;
+    background-color: red;
+    border-radius: 100px;
+}
+#profilterBox{
+    border: 1px solid yellowgreen;
+    height: 100px;
+}
+#proCategorie{
+    padding-right: 52%;
+    padding-bottom: 10px;
+    border: transparent;
+    
+}
+#proLine{
+    font-weight: bold;
+}
+.line{
+    background-color: rgb(221, 216, 209);
+    /* border: 1px solid red; */
+    height: 0.2px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#sizefilterBox{
+    border: 1px solid red;
+    height: 100px;
+}
+#sizebox{
+  padding-right: 76%;
+  border: transparent;
+}
+#colorbox{
+    padding-right: 74%;
+    border: transparent;
+}
+#clouserbox{
+    padding-right: 69%;
+    border: transparent;
+}

@@ -1,3 +1,4 @@
+// all data ....
 var data = [
                {
                 image:"https://www.uboric.com/wp-content/uploads/2021/02/DSC_1011_result.jpg" ,
@@ -81,7 +82,7 @@ var data = [
     category: "mojdi" ,
     size: "7" ,
     color: "black" ,
-    clouse: "slipon" ,
+    clouse: "laceup" ,
 },
 {
     image:"https://www.uboric.com/wp-content/uploads/2021/02/DSC_0911_result.jpg" ,
@@ -95,7 +96,7 @@ var data = [
     category: "footwear" ,
     size: "6" ,
     color: "black" ,
-    clouse: "slipon" ,
+    clouse: "laceup" ,
 },
 {
     image:"https://www.uboric.com/wp-content/uploads/2021/02/DSC_0943_result.jpg" ,
@@ -174,6 +175,7 @@ var data = [
  localStorage.setItem("list" , JSON.stringify(data)) ;
  display(data)
 
+//  for display in screen....
  function display(data){
     document.querySelector("#productlist").textContent = "" ;
      data.map(function(el,index){
@@ -246,6 +248,7 @@ var data = [
      })
  }
 
+//  slider ....
  $( function() {
     $( "#slider" ).slider({
       range: true,
@@ -276,6 +279,7 @@ $( "#amount" ).val( "₹" + $( "#slider" ).slider( "values", 0 ) +
     //   console.log(values) ;
   }
 
+// product filter ....
   function proFilter(){
       var select = document.querySelector("#proCategorie").value 
       var Profilterlist = data.filter(function(el){
@@ -284,6 +288,7 @@ $( "#amount" ).val( "₹" + $( "#slider" ).slider( "values", 0 ) +
       display(Profilterlist) ;
   }
 
+//   size filter....
   function sizeFilter(){
     var select = document.querySelector("#sizebox").value 
     var sizelist = data.filter(function(el){
@@ -292,6 +297,7 @@ $( "#amount" ).val( "₹" + $( "#slider" ).slider( "values", 0 ) +
     display(sizelist) ;
 }
 
+// color filter ....
 function colorFilter(){
     var select = document.querySelector("#colorbox").value 
     var colorlist = data.filter(function(el){
@@ -300,6 +306,7 @@ function colorFilter(){
     display(colorlist) ;
 }
 
+// clouser filter ....
 function clouserFilter(){
     var select = document.querySelector("#clouserbox").value 
     var clouserlist = data.filter(function(el){

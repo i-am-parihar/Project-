@@ -851,14 +851,23 @@ function openCategory(evt, cityName) {
                   </tbody>
               </table>
               <div id="buycart">
-                  <div>
-                       <button id="butt1"  > <input type="hidden">BUY NOW</button>  </div>   
+                   <div>   
+                        <!-- go to buy option  --> 
+                       <button id="butt1" onclick="movetocart()" > <input type="hidden">BUY NOW</button>  </div>   
+                       
                   <div>
                       <input type="number" id="input1" value="1"  min="1" max="999" >
                   </div>
                   <div ><button id="butt3" onclick="addcart()" >ADD TO CART</button> </div>
 
 <script>
+
+
+
+                        function movetocart(){
+                            window.location.href="index.html"
+                        }
+                     
      var total=[];
     
       function addcart(){
@@ -917,7 +926,7 @@ function openCategory(evt, cityName) {
                <span id="skuholl"> <span id="sku"> SKU:</span> WOOD66 </span>
                <br>
                <span id="skuholl"> <span id="sku"> Categories:</span> Casual/Party shoes,Foot Wear,Men's footwear </span>
-               <div id="icons">
+               <!-- <div id="icons">
                    <div>
                    <button> <i class="fab fa-facebook-square" style="font-size:45px;color:blue"></i></button>
                    </div>
@@ -940,7 +949,64 @@ function openCategory(evt, cityName) {
             
             </div>
               
-          </div>
+          </div> -->
+          <div id="icons">
+            <div>
+            <button onclick="buttt1()" > <i class="fab fa-facebook-square" style="font-size:45px;color:blue"></i></button>
+            <script>
+               function buttt1(){
+                   window.location.href="https://www.facebook.com/"
+               }
+            </script>
+            </div>
+            <div>
+            <button onclick="buttt2()"><i class="fa fa-whatsapp-square" style="font-size:45px;color:green"></i></button> 
+          <script>
+              function buttt2(){
+
+              
+              window.location.href="https://www.whatsapp.com/"
+              }
+          </script>
+          
+            </div>
+            <div> 
+             <button onclick="buttt3()"><i class="fa fa-twitter-square" style="font-size:45px;color:#23a6d5"></i></i></button> 
+             <script>
+                 function buttt3(){
+                     window.location.href="https://twitter.com/"
+                 }
+              </script>
+            </div>
+            <div>
+             <button onclick="buttt4()"><i class="fa fa-envelope-square" aria-hidden="true" style="font-size: 45px; color: #7a0505;"></i></button> 
+             <script>
+                 function buttt4(){
+                     window.location.href="https://www.google.com/intl/en-GB/gmail/about/#"
+                 }
+              </script>
+            </div>
+            <div>
+                <button onclick="buttt5()"><i class="fa fa-skype" style="font-size:45px;color:#23a6d5"></i></button>
+                <script>
+                 function buttt5(){
+                     window.location.href="https://www.skype.com/en/"
+                 }
+              </script>
+            </div>
+            <div>
+                <button onclick="buttt6()"><i class="fa fa-telegram" style="font-size:45px;color:#23a6d5"></i></button>
+                <script>
+                 function buttt6(){
+                     window.location.href="https://telegram.org/"
+                 }
+              </script>
+            </div>
+        </div>
+     
+     </div>
+       
+   </div>
 
           <div id="descriptionsize">
            

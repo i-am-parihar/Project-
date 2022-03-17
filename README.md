@@ -22,13 +22,12 @@ We used HTML, CSS, javascript for building this website.
 ![checkout](https://user-images.githubusercontent.com/95961349/158535482-97ebab96-46de-4bd9-8985-e0179d23526c.png)
 
 # 4. Our Team:
-We were six members in team:
+We were five members in team:
 1. Rahul Lodhi
 2. Mayur Kachane 
 3. Paritosh Parihar
 4. Shaikh Ahmad Zaki
 5. Shivangi Mall
-6. Chandan Kumar
 
 # 5. Quick Start
 1. Open a folder where you want to clone the repo
